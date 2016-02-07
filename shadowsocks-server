@@ -1,0 +1,54 @@
+ervers
+Python
+shadowsocks-python is the initial version written by @clowwindy. It aims to provide a simple-to-use and easy-to-deploy implementation with basic features of shadowsocks.
+PyPI
+First, make sure you have Python 2.6 or 2.7.
+$ python --version
+Python 2.6.8
+Then install from PIP
+$ pip install shadowsocks
+GitHub
+Checkout the source codes and run the scripts directly.
+$ git clone https://github.com/shadowsocks/shadowsocks.git
+$ cd shadowsocks
+$ python setup.py
+shadowsocks-python is licensed under the Apache License, Version 2.0.
+Go
+shadowsocks-go is a state-of-the-art port written in Go language, designed for large-scale system. It implements the multi-ports-multi-password feature, which is suitable for paid service providers with user management and traffic statistics support. This port is maintained by @cyfdecyf.
+Pre-built Binaries
+Download archives from http://dl.chenyufei.info/shadowsocks/.
+GitHub
+Use go get to install the scripts.
+$ go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server
+shadowsocks-go is licensed under the MIT license.
+C with libev
+shadowsocks-libev is a lightweight and full featured port for embedded devices and low end boxes. It's a pure C implementation and has a very small footprint (several megabytes) for thousands of connections. This port is maintained by @madeye.
+Debian/Ubuntu:
+First, add the GPG public key to your system:
+$ wget -O- http://shadowsocks.org/debian/1D27208A.gpg | sudo apt-key add -
+Install the binaries by adding each of the following repositories to your system.
+On Debian Wheezy, Ubuntu 12.04 or any distribution with libssl > 1.0.0
+$ echo "deb http://shadowsocks.org/debian wheezy main" >> /etc/apt/sources.list
+On Debian Squeeze, Ubuntu 11.04, or any distribution with libssl > 0.9.8, but < 1.0.0
+$ echo "deb http://shadowsocks.org/debian squeeze main" >> /etc/apt/sources.list
+Then
+$ apt-get update
+$ apt-get install shadowsocks-libev
+GitHub
+Build and install the project from source codes.
+$ git clone https://github.com/shadowsocks/shadowsocks-libev.git
+$ cd shadowsocks-libev
+$ sudo apt-get install build-essential autoconf libtool libssl-dev
+$ ./configure && make
+$ make install
+shadowsocks-libev is licensed under the GNU General Public License v3.0.
+C++ with Qt
+libQtShadowsocks is a lightweight and ultra-fast shadowsocks library written in C++ with Qt 5. The client shadowsocks-libqss can be used in both client-side and server-side. This port is maintained by @librehat.
+Prebuilt binaries
+Download pre-built binaries from https://github.com/shadowsocks/libQtShadowsocks/releases
+GitHub
+$ git clone https://github.com/shadowsocks/libQtShadowsocks.git
+$ cd libQtShadowsocks
+$ qmake
+$ make -j4
+$ sudo make install
